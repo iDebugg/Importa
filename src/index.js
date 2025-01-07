@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from './Pages/Dashboard';
 import Orders from './Pages/Orders';
+import Customers from './Pages/Customers';
+import Payments from './Pages/Payments';
+import ShippingAndLogistics from './Pages/ShippingAndLogistics';
 
 
 
@@ -21,6 +24,18 @@ const router = createBrowserRouter([
   {
     path: "/Orders",
     element: <Orders />,
+  },
+  {
+    path: "/Customers",
+    element: <Customers />,
+  },
+  {
+    path: "/Payments",
+    element: <Payments />,
+  },
+  {
+    path: "/ShippingAndLogistics",
+    element: <ShippingAndLogistics />,
   },
   
 

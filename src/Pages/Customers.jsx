@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlus,
-  faBell,
-  faCircle,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 import gdgd from "../Assets/img/Vector.svg";
 
-const Orders = () => {
+const Customers = () => {
   const [selectedOrders, setSelectedOrders] = useState([]);
   const [selectAll, setSelectAll] = useState(false);
   const [showExportOptions, setShowExportOptions] = useState(false);
@@ -94,11 +89,11 @@ const Orders = () => {
     if (type === "pdf") {
       const pdf = new jsPDF();
       pdf.addImage(imgData, "PNG", 10, 10, 190, 0);
-      pdf.save("orders.pdf");
+      pdf.save("customers.pdf");
     } else if (type === "image") {
       const link = document.createElement("a");
       link.href = imgData;
-      link.download = "orders.png";
+      link.download = "customers.png";
       link.click();
     }
     setShowExportOptions(false);
@@ -123,7 +118,7 @@ const Orders = () => {
       <main className="md:ml-64 hidden sm:hidden md:block">
         <div className="bg-white p-5 display: flex justify-between">
           <div className="display: flex gap-2">
-            <h1 className="font-semibold text-3xl text-[#0A0500]">Orders</h1>
+            <h1 className="font-semibold text-3xl text-[#0A0500]">Customers</h1>
             <div className="p-2 display: flex items-center gap-2 border rounded-lg">
               <svg
                 width="20"
@@ -195,7 +190,7 @@ const Orders = () => {
           <div className="p-4 bg-white rounded-xl h-full">
             <div className="flex justify-between items-center mb-4">
               <h1 className="text-sm font-semibold">
-                All Orders{" "}
+                All Customers{" "}
                 <span className="text-[#7B7875]">({orders.length})</span>
               </h1>
               <div className="pool display: flex gap-2">
@@ -386,31 +381,28 @@ const Orders = () => {
                     />
                   </th>
                   <th className="p-2 text-[#7B7875] text-sm font-semibold">
-                    Order ID
+                    Customer ID
                   </th>
                   <th className="p-2 text-[#7B7875] text-sm font-semibold">
-                    Customer
+                    Customer Name
                   </th>
                   <th className="p-2 text-[#7B7875] text-sm font-semibold">
-                    Date
+                    Email
                   </th>
                   <th className="p-2 text-[#7B7875] text-sm font-semibold">
-                    Delivery Type
+                    Reg Date
                   </th>
                   <th className="p-2 text-[#7B7875] text-sm font-semibold">
-                    Order(s)
+                    Phone Number
                   </th>
                   <th className="p-2 text-[#7B7875] text-sm font-semibold">
-                    Ordered item(s)
+                    Total Orders
                   </th>
                   <th className="p-2 text-[#7B7875] text-sm font-semibold">
-                    Price
+                    Total Spend
                   </th>
                   <th className="p-2 text-[#7B7875] text-sm font-semibold">
-                    Status
-                  </th>
-                  <th className="p-2 text-[#7B7875] text-sm font-semibold">
-                    Actions
+                    Action
                   </th>
                 </tr>
               </thead>
@@ -437,10 +429,7 @@ const Orders = () => {
                       {order.deliveryType}
                     </td>
                     <td className="p-2 text-[#0A0500] font-light">
-                      {order.orders}
-                    </td>
-                    <td className="p-2 text-[#0A0500] font-light">
-                      {order.orderedItems}
+                      {order.orderCount}
                     </td>
                     <td className="p-2 text-[#0A0500] font-light">
                       ${order.price}
@@ -484,4 +473,4 @@ const Orders = () => {
   );
 };
 
-export default Orders;
+export default Customers;

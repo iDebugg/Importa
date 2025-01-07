@@ -6,7 +6,6 @@ import {
   faArrowRight,
   faBars,
   faTimes,
-
 } from "@fortawesome/free-solid-svg-icons";
 import NavLogo from "../Assets/img/importa_logo_1@4x.svg";
 import DropdownLogo from "../Assets/img/importa_logo_1@4x.svg";
@@ -153,7 +152,21 @@ const Navbar = () => {
                 stroke-linejoin="round"
               />
             </svg>
-            <span className="sidemenus ml-2 text-lg">Items & Ads</span>
+            <span className="sidemenus ml-2 mr-4 text-lg">Items & Ads</span>{" "}
+            <svg
+              width="20"
+              height="10"
+              viewBox="0 0 10 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L5 5L9 1"
+                stroke="#7B7875"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </Link>
           <Link
             to="/Orders"
@@ -223,9 +236,9 @@ const Navbar = () => {
             <span className="sidemenus ml-2 text-lg">Orders</span>
           </Link>
           <Link
-            to="/Cryptocurrency"
+            to="/Customers"
             className={`flex items-center p-3 ${
-              isActive("/Cryptocurrency")
+              isActive("/Customers")
                 ? "bg-[#D9851F] text-[#edecec] rounded-xl"
                 : "text-[#7B7875]"
             }`}
@@ -262,9 +275,9 @@ const Navbar = () => {
             <span className="sidemenus ml-2 text-lg">Customers</span>
           </Link>
           <Link
-            to="/Cryptocurrency"
+            to="/Payments"
             className={`flex items-center p-3 ${
-              isActive("/Cryptocurrency")
+              isActive("/Payments")
                 ? "bg-[#D9851F] text-[#edecec] rounded-xl"
                 : "text-[#7B7875]"
             }`}
@@ -294,9 +307,9 @@ const Navbar = () => {
             <span className="sidemenus ml-2 text-lg">Payments</span>
           </Link>
           <Link
-            to="/Cryptocurrency"
+            to="/ShippingAndLogistics"
             className={`flex items-center p-3 ${
-              isActive("/Cryptocurrency")
+              isActive("/ShippingAndLogistics")
                 ? "bg-[#D9851F] text-[#edecec] rounded-xl"
                 : "text-[#7B7875]"
             }`}

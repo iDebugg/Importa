@@ -3,9 +3,8 @@ import Navbar from "../Components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlus,
-  faBell,
   faCircle,
-  faTimes,
+
 } from "@fortawesome/free-solid-svg-icons";
 
 function Dashboard() {
