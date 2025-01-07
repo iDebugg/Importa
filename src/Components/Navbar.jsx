@@ -403,7 +403,7 @@ const Navbar = () => {
         <div>
           <Link onClick={handleLogout}>
             <a href="#logout" className="flex items-center p-2 text-white">
-              <span className="ml-2 text-2xl">Log Out</span>
+              <span className="ml-2 text-2xl text-[#7B7875]">Log Out</span>
             </a>
           </Link>
         </div>
