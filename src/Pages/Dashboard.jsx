@@ -1,11 +1,9 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlus,
-  faCircle,
-
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faCircle } from "@fortawesome/free-solid-svg-icons";
+import RecentOrders from "../Components/RecentOrders";
+import images from '../Assets/img/cloth.svg'
 
 function Dashboard() {
   return (
@@ -58,15 +56,17 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="display: flex p-4">
-          <div className="display: grid w-9/12">
+        <div className="display: flex p-4 gap-3">
+          <div className="display: grid gap-2 w-9/12">
             <div className="display: flex gap-2">
               <div className="bg-white rounded-xl p-3">
                 <h5 className="text-sm text-[#7B7875] font-light mb-3">
                   Total Orders
                 </h5>
                 <div className="display: flex gap-6 mb-6">
-                  <h3 className="text-lg sm:text-lg md:text-lg lg:text-3xl font-bold font-[#0A0500]">10.0k</h3>
+                  <h3 className="text-lg sm:text-lg md:text-lg lg:text-3xl font-bold font-[#0A0500]">
+                    10.0k
+                  </h3>
                   <h5 className="leading-9 text-sm text-[#41D402]">
                     + 2.3%{" "}
                     <span className="font-extralight text-xs text-[#B3B2B0]">
@@ -75,11 +75,13 @@ function Dashboard() {
                   </h5>
                 </div>
                 <div className="display: flex justify-between">
-                  <h3 className="text-xs bg-[#FDF4E9] text-[#D9851F] px-2 py-1 rounded-md">Live</h3>
+                  <h3 className="text-xs bg-[#FDF4E9] text-[#D9851F] px-2 py-1 rounded-md">
+                    Live
+                  </h3>
                   <h5 className=" text-xs text-[#7B7875] font-light">
-                    Today: {" "}
+                    Today:{" "}
                     <span className="font-bold text-xs text-[#0A0500] ml-1">
-                       6 orders
+                      6 orders
                     </span>
                   </h5>
                 </div>
@@ -98,11 +100,13 @@ function Dashboard() {
                   </h5>
                 </div>
                 <div className="display: flex justify-between">
-                  <h3 className="text-xs bg-[#FDF4E9] text-[#D9851F] px-2 py-1 rounded-md">Live</h3>
+                  <h3 className="text-xs bg-[#FDF4E9] text-[#D9851F] px-2 py-1 rounded-md">
+                    Live
+                  </h3>
                   <h5 className=" text-xs text-[#7B7875] font-light">
-                    Today: {" "}
+                    Today:{" "}
                     <span className="font-bold text-xs text-[#0A0500] ml-1">
-                       $2k
+                      $2k
                     </span>
                   </h5>
                 </div>
@@ -121,19 +125,149 @@ function Dashboard() {
                   </h5>
                 </div>
                 <div className="display: flex justify-between">
-                  <h3 className="text-xs bg-[#FDF4E9] text-[#D9851F] px-2 py-1 rounded-md">Live</h3>
+                  <h3 className="text-xs bg-[#FDF4E9] text-[#D9851F] px-2 py-1 rounded-md">
+                    Live
+                  </h3>
                   <h5 className=" text-xs text-[#7B7875] font-light">
-                    Today: {" "}
+                    Today:{" "}
                     <span className="font-bold text-xs text-[#0A0500] ml-1">
-                       100
+                      100
                     </span>
                   </h5>
                 </div>
               </div>
-              
             </div>
+            <RecentOrders />
+            <RecentOrders />
           </div>
-          <div className="display: grid w-3/12"></div>
+          <div className="flex flex-col w-3/12 gap-5">
+            <div className="bg-white rounded-xl p-3">
+             
+                <div className="display: flex justify-between mb-5">
+                <h1 className="text-[#0A0500] font-bold text-lg">Best Selling Products</h1>
+                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99984 11.1667C10.4601 11.1667 10.8332 10.7936 10.8332 10.3333C10.8332 9.8731 10.4601 9.5 9.99984 9.5C9.5396 9.5 9.1665 9.8731 9.1665 10.3333C9.1665 10.7936 9.5396 11.1667 9.99984 11.1667Z" stroke="#0A0500" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.99984 5.33317C10.4601 5.33317 10.8332 4.96007 10.8332 4.49984C10.8332 4.0396 10.4601 3.6665 9.99984 3.6665C9.5396 3.6665 9.1665 4.0396 9.1665 4.49984C9.1665 4.96007 9.5396 5.33317 9.99984 5.33317Z" stroke="#0A0500" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.99984 16.9999C10.4601 16.9999 10.8332 16.6268 10.8332 16.1666C10.8332 15.7063 10.4601 15.3333 9.99984 15.3333C9.5396 15.3333 9.1665 15.7063 9.1665 16.1666C9.1665 16.6268 9.5396 16.9999 9.99984 16.9999Z" stroke="#0A0500" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div>
+                <div className="dis[lay: flex flex-col gap-3">
+                <div className="display: flex justify-between items-center">
+                  <div className="display: flex gap-1">
+                  <img src={images} alt="" />
+                  <div className="display: flex flex-col">
+                    <h1 className="text-[#0A0500] text-sm">ASHION 10...</h1>
+                    <h1 className="text-[#7B7875] text-xs">Sales this week:  <span className="text-[#0A0500]">12</span></h1>
+                  </div>
+                  </div>
+                  <div>
+                    <h1 className="text-[#7B7875] text-sm"> ₦10.5K</h1>
+                  </div>
+                </div>
+                <div className="display: flex justify-between items-center">
+                  <div className="display: flex gap-1">
+                  <img src={images} alt="" />
+                  <div className="display: flex flex-col">
+                    <h1 className="text-[#0A0500] text-sm">ASHION 10...</h1>
+                    <h1 className="text-[#7B7875] text-xs">Sales this week:  <span className="text-[#0A0500]">12</span></h1>
+                  </div>
+                  </div>
+                  <div>
+                    <h1 className="text-[#7B7875] text-sm"> ₦10.5K</h1>
+                  </div>
+                </div>
+                <div className="display: flex justify-between items-center">
+                  <div className="display: flex gap-1">
+                  <img src={images} alt="" />
+                  <div className="display: flex flex-col">
+                    <h1 className="text-[#0A0500] text-sm">ASHION 10...</h1>
+                    <h1 className="text-[#7B7875] text-xs">Sales this week:  <span className="text-[#0A0500]">12</span></h1>
+                  </div>
+                  </div>
+                  <div>
+                    <h1 className="text-[#7B7875] text-sm"> ₦10.5K</h1>
+                  </div>
+                </div>
+                <div className="display: flex justify-between items-center">
+                  <div className="display: flex gap-1">
+                  <img src={images} alt="" />
+                  <div className="display: flex flex-col">
+                    <h1 className="text-[#0A0500] text-sm">ASHION 10...</h1>
+                    <h1 className="text-[#7B7875] text-xs">Sales this week:  <span className="text-[#0A0500]">12</span></h1>
+                  </div>
+                  </div>
+                  <div>
+                    <h1 className="text-[#7B7875] text-sm"> ₦10.5K</h1>
+                  </div>
+                </div>
+                </div>
+                
+            
+            </div>
+            <div className="bg-white rounded-xl p-3">
+             
+             <div className="display: flex justify-between mb-5">
+             <h1 className="text-[#0A0500] font-bold text-lg">Best Selling Products</h1>
+             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99984 11.1667C10.4601 11.1667 10.8332 10.7936 10.8332 10.3333C10.8332 9.8731 10.4601 9.5 9.99984 9.5C9.5396 9.5 9.1665 9.8731 9.1665 10.3333C9.1665 10.7936 9.5396 11.1667 9.99984 11.1667Z" stroke="#0A0500" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.99984 5.33317C10.4601 5.33317 10.8332 4.96007 10.8332 4.49984C10.8332 4.0396 10.4601 3.6665 9.99984 3.6665C9.5396 3.6665 9.1665 4.0396 9.1665 4.49984C9.1665 4.96007 9.5396 5.33317 9.99984 5.33317Z" stroke="#0A0500" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.99984 16.9999C10.4601 16.9999 10.8332 16.6268 10.8332 16.1666C10.8332 15.7063 10.4601 15.3333 9.99984 15.3333C9.5396 15.3333 9.1665 15.7063 9.1665 16.1666C9.1665 16.6268 9.5396 16.9999 9.99984 16.9999Z" stroke="#0A0500" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+             </div>
+             <div className="dis[lay: flex flex-col gap-3">
+             <div className="display: flex justify-between items-center">
+               <div className="display: flex gap-1">
+               <img src={images} alt="" />
+               <div className="display: flex flex-col">
+                 <h1 className="text-[#0A0500] text-sm">ASHION 10...</h1>
+                 <h1 className="text-[#7B7875] text-xs">Sales this week:  <span className="text-[#0A0500]">12</span></h1>
+               </div>
+               </div>
+               <div>
+                 <h1 className="text-[#7B7875] text-sm"> ₦10.5K</h1>
+               </div>
+             </div>
+             <div className="display: flex justify-between items-center">
+               <div className="display: flex gap-1">
+               <img src={images} alt="" />
+               <div className="display: flex flex-col">
+                 <h1 className="text-[#0A0500] text-sm">ASHION 10...</h1>
+                 <h1 className="text-[#7B7875] text-xs">Sales this week:  <span className="text-[#0A0500]">12</span></h1>
+               </div>
+               </div>
+               <div>
+                 <h1 className="text-[#7B7875] text-sm"> ₦10.5K</h1>
+               </div>
+             </div>
+             <div className="display: flex justify-between items-center">
+               <div className="display: flex gap-1">
+               <img src={images} alt="" />
+               <div className="display: flex flex-col">
+                 <h1 className="text-[#0A0500] text-sm">ASHION 10...</h1>
+                 <h1 className="text-[#7B7875] text-xs">Sales this week:  <span className="text-[#0A0500]">12</span></h1>
+               </div>
+               </div>
+               <div>
+                 <h1 className="text-[#7B7875] text-sm"> ₦10.5K</h1>
+               </div>
+             </div>
+             <div className="display: flex justify-between items-center">
+               <div className="display: flex gap-1">
+               <img src={images} alt="" />
+               <div className="display: flex flex-col">
+                 <h1 className="text-[#0A0500] text-sm">ASHION 10...</h1>
+                 <h1 className="text-[#7B7875] text-xs">Sales this week:  <span className="text-[#0A0500]">12</span></h1>
+               </div>
+               </div>
+               <div>
+                 <h1 className="text-[#7B7875] text-sm"> ₦10.5K</h1>
+               </div>
+             </div>
+             </div>
+             
+         
+         </div>
+          </div>
         </div>
       </main>
     </>

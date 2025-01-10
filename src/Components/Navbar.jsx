@@ -109,9 +109,9 @@ const Navbar = () => {
             <span className="sidemenus ml-2 text-lg">Dashboard</span>
           </Link>
           <Link
-            to="/Activity"
+            to="/RecentOrders"
             className={`flex items-center p-3 ${
-              isActive("/Activity")
+              isActive("/RecentOrders")
                 ? "bg-[#D9851F] text-[#edecec] rounded-xl"
                 : "text-[#7B7875]"
             }`}

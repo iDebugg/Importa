@@ -9,6 +9,7 @@ import Orders from './Pages/Orders';
 import Customers from './Pages/Customers';
 import Payments from './Pages/Payments';
 import ShippingAndLogistics from './Pages/ShippingAndLogistics';
+import RecentOrders from './Components/RecentOrders';
 
 
 
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
     path: "/ShippingAndLogistics",
     element: <ShippingAndLogistics />,
   },
+  {
+    path: "/RecentOrders",
+    element: <RecentOrders />,
+  },
+  
   
 
 ]);
