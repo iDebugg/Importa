@@ -109,9 +109,9 @@ const Navbar = () => {
             <span className="sidemenus ml-2 text-lg">Dashboard</span>
           </Link>
           <Link
-            to="/RecentOrders"
+            to="/Items"
             className={`flex items-center p-3 ${
-              isActive("/RecentOrders")
+              isActive("/Items")
                 ? "bg-[#D9851F] text-[#edecec] rounded-xl"
                 : "text-[#7B7875]"
             }`}
@@ -360,9 +360,9 @@ const Navbar = () => {
             <span className="sidemenus ml-2 text-lg">Shipping & Logistics</span>
           </Link>
           <Link
-            to="/Cryptocurrency"
+            to="/FAQs"
             className={`flex items-center p-3 ${
-              isActive("/Cryptocurrency")
+              isActive("/FAQs")
                 ? "bg-[#D9851F] text-[#edecec] rounded-xl"
                 : "text-[#7B7875]"
             }`}

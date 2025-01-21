@@ -10,6 +10,12 @@ import Customers from './Pages/Customers';
 import Payments from './Pages/Payments';
 import ShippingAndLogistics from './Pages/ShippingAndLogistics';
 import RecentOrders from './Components/RecentOrders';
+import FAQs from './Pages/FAQs';
+import AddProductForm from './Components/AddProductForm';
+import Items from './Pages/Items';
+import LoginForm from './Components/LoginForm';
+import ProductDetails from './Components/ProductDetails';
+
 
 
 
@@ -41,6 +47,26 @@ const router = createBrowserRouter([
   {
     path: "/RecentOrders",
     element: <RecentOrders />,
+  },
+  {
+    path: "/FAQs",
+    element: <FAQs />,
+  },
+  {
+    path: "/AddProductForm",
+    element: <AddProductForm />,
+  },
+  {
+    path: "/Items",
+    element: <Items />,
+  },
+  {
+    path: "/LoginForm",
+    element: <LoginForm />,
+  },
+  {
+    path: "/ProductDetails/:id",
+    element: <ProductDetails />,
   },
   
   

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
-import gdgd from "../Assets/img/Frame 762.svg";
+import gdgd from "../Assets/img/MENUI.svg";
 
 const Customers = () => {
   const [selectedOrders, setSelectedOrders] = useState([]);
